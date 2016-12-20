@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2B-ME-FTY">
+                                <rect key="frame" x="0.0" y="550" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.95315302830000004" green="1" blue="0.86849575059999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YtV-G3-4ZL"/>
+                                </constraints>
+                                <state key="normal" title="Pick from Library"/>
+                                <connections>
+                                    <action selector="selectExistingPictureOrVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLq-nq-psE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-5e-v8p">
+                                <rect key="frame" x="0.0" y="512" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.95315302830000004" green="1" blue="0.86849575059999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SH0-jT-Wk1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="New Photo or Video"/>
+                                <connections>
+                                    <action selector="shootPictureOrVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdV-cM-onq"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U59-fQ-1Ag">
+                                <rect key="frame" x="0.0" y="28" width="600" height="476"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.91173360059999997" blue="0.908404879" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TDF-5e-v8p" secondAttribute="trailing" constant="-20" id="0c7-bU-OJj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O2B-ME-FTY" secondAttribute="bottom" constant="20" id="8IS-if-X4X"/>
+                            <constraint firstItem="O2B-ME-FTY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="EAz-Dc-M0X"/>
+                            <constraint firstItem="O2B-ME-FTY" firstAttribute="top" secondItem="TDF-5e-v8p" secondAttribute="bottom" constant="8" id="ZeL-A1-6G4"/>
+                            <constraint firstItem="TDF-5e-v8p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ZjB-T7-Dhj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U59-fQ-1Ag" secondAttribute="trailing" constant="-20" id="gWE-3a-Js6"/>
+                            <constraint firstItem="U59-fQ-1Ag" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gWc-Lj-rH2"/>
+                            <constraint firstItem="U59-fQ-1Ag" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nrg-ii-F1O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O2B-ME-FTY" secondAttribute="trailing" constant="-20" id="qqu-wg-yuO"/>
+                            <constraint firstItem="TDF-5e-v8p" firstAttribute="top" secondItem="U59-fQ-1Ag" secondAttribute="bottom" constant="8" id="w7r-Nq-9oU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="U59-fQ-1Ag" id="Uwh-Ve-pjr"/>
+                        <outlet property="selectPictureButton" destination="O2B-ME-FTY" id="qP2-oW-O6L"/>
+                        <outlet property="takePictureButton" destination="TDF-5e-v8p" id="V6j-x8-1wb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlowWorker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7Y-9S-10J">
+                                <rect key="frame" x="253" y="28" width="95" height="20"/>
+                                <state key="normal" title="Start Working"/>
+                                <connections>
+                                    <action selector="doWork:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ulr-dg-aRO"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fvq-Mn-Cms">
+                                <rect key="frame" x="20" y="81" width="560" height="151"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="YKV-pN-XfY"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pnI-bY-pRV">
+                                <rect key="frame" x="361" y="28" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pnI-bY-pRV" secondAttribute="height" multiplier="1:1" id="vC3-tk-jR7"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95315302830000004" green="1" blue="0.86849575059999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="K7Y-9S-10J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Xl-U5-b0k"/>
+                            <constraint firstItem="pnI-bY-pRV" firstAttribute="height" secondItem="K7Y-9S-10J" secondAttribute="height" id="Ge3-YW-kdI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fvq-Mn-Cms" secondAttribute="trailing" id="Oc6-5J-6et"/>
+                            <constraint firstItem="pnI-bY-pRV" firstAttribute="centerY" secondItem="K7Y-9S-10J" secondAttribute="centerY" id="PLx-UY-xKB"/>
+                            <constraint firstItem="K7Y-9S-10J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="PvP-Be-ZeO"/>
+                            <constraint firstItem="fvq-Mn-Cms" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QzJ-1t-iCL"/>
+                            <constraint firstItem="pnI-bY-pRV" firstAttribute="leading" secondItem="K7Y-9S-10J" secondAttribute="trailing" constant="13" id="Uqz-YV-VZl"/>
+                            <constraint firstItem="fvq-Mn-Cms" firstAttribute="top" secondItem="K7Y-9S-10J" secondAttribute="bottom" constant="33" id="ZFD-zr-IsM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="fvq-Mn-Cms" secondAttribute="leading" id="q9c-Lp-2hk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultsTextView" destination="fvq-Mn-Cms" id="whD-CE-47E"/>
+                        <outlet property="spinner" destination="pnI-bY-pRV" id="0qo-gc-a5z"/>
+                        <outlet property="startButton" destination="K7Y-9S-10J" id="iIC-aZ-Jek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="136"/>
+        </scene>
+    </scenes>
+</document>

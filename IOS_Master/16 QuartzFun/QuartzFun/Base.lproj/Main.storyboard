@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuartzFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QuartzFunView" customModule="QuartzFun">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KRy-ri-fhX">
+                                <rect key="frame" x="200" y="552" width="201" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="bxf-zf-dc2"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Line"/>
+                                    <segment title="Rect"/>
+                                    <segment title="Ellipse"/>
+                                    <segment title="Image"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeShape:" destination="BYZ-38-t0r" eventType="valueChanged" id="cyM-kb-KBp"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rQL-vg-csJ">
+                                <rect key="frame" x="154" y="28" width="293" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="Ap7-tL-V09"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Red"/>
+                                    <segment title="Blue"/>
+                                    <segment title="Yellow"/>
+                                    <segment title="Green"/>
+                                    <segment title="Random"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="jmx-SK-Hho"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95315302830000004" green="1" blue="0.86849575059999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rQL-vg-csJ" firstAttribute="centerX" secondItem="KRy-ri-fhX" secondAttribute="centerX" id="O0a-OD-0a2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KRy-ri-fhX" secondAttribute="bottom" constant="20" id="Whf-zS-O35"/>
+                            <constraint firstItem="rQL-vg-csJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="aJG-tL-beG"/>
+                            <constraint firstItem="KRy-ri-fhX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zGp-2J-c0k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorControl" destination="rQL-vg-csJ" id="v6h-2v-PtU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137"/>
+        </scene>
+    </scenes>
+</document>

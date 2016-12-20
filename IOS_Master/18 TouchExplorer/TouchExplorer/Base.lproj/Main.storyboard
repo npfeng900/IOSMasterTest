@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TouchExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nze-Tp-iP0">
+                                <rect key="frame" x="204" y="20" width="192" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nze-Tp-iP0" secondAttribute="height" multiplier="64:7" id="sVI-40-0bw"/>
+                                    <constraint firstAttribute="width" constant="192" id="xTp-QQ-6Rj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS6-5P-WpW">
+                                <rect key="frame" x="204" y="49" width="192" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="epi-S1-Ce0"/>
+                                    <constraint firstAttribute="width" secondItem="hS6-5P-WpW" secondAttribute="height" multiplier="64:7" id="xXW-Ya-joo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO0-u7-w89">
+                                <rect key="frame" x="204" y="78" width="192" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UO0-u7-w89" secondAttribute="height" multiplier="64:7" id="6mc-ea-jln"/>
+                                    <constraint firstAttribute="width" constant="192" id="KGZ-sw-9Qv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95315302830000004" green="1" blue="0.86849575059999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hS6-5P-WpW" firstAttribute="top" secondItem="nze-Tp-iP0" secondAttribute="bottom" constant="8" symbolic="YES" id="4XF-iM-VaP"/>
+                            <constraint firstItem="nze-Tp-iP0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JLP-Un-Y6X"/>
+                            <constraint firstItem="nze-Tp-iP0" firstAttribute="leading" secondItem="hS6-5P-WpW" secondAttribute="leading" id="SXc-L6-aVP"/>
+                            <constraint firstItem="UO0-u7-w89" firstAttribute="top" secondItem="hS6-5P-WpW" secondAttribute="bottom" constant="8" symbolic="YES" id="o1k-gK-Rz1"/>
+                            <constraint firstItem="hS6-5P-WpW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pgx-Ur-s2r"/>
+                            <constraint firstItem="UO0-u7-w89" firstAttribute="leading" secondItem="hS6-5P-WpW" secondAttribute="leading" id="rTi-uL-HEN"/>
+                            <constraint firstItem="UO0-u7-w89" firstAttribute="trailing" secondItem="hS6-5P-WpW" secondAttribute="trailing" id="vbU-6s-RAt"/>
+                            <constraint firstItem="nze-Tp-iP0" firstAttribute="trailing" secondItem="hS6-5P-WpW" secondAttribute="trailing" id="yj8-uu-IvC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="nze-Tp-iP0" id="iRh-jA-UXe"/>
+                        <outlet property="tapLabel" destination="hS6-5P-WpW" id="POW-3i-jb3"/>
+                        <outlet property="touchesLabel" destination="UO0-u7-w89" id="MlQ-Iu-6R3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="350"/>
+        </scene>
+    </scenes>
+</document>
